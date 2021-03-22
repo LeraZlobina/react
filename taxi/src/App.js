@@ -15,7 +15,7 @@ class App extends React.Component {
 
   render() {  
     return <>
-      {this.state.currentPage!=="login" && <Header navigate={this.navigateTo} />}
+      {(this.state.currentPage!=="login" && this.state.currentPage!=="signup" ) && <Header navigate={this.navigateTo} />}
       <div>
         {this.state.currentPage === "login" && <Login navigate={this.navigateTo} />}
         {this.state.currentPage === "signup" && <Signup navigate={this.navigateTo} />}
